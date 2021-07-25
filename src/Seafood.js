@@ -26,7 +26,7 @@ export default function Seafood(){
                     <div className="col-sm-3">
                     <div className="card mt-4">
                         <img className="card-img-top" src={obj.strMealThumb} />
-                        <div className="card-body">
+                        <div className="card-body ">
                         <p>{obj.strMeal}</p>    
                         <p>{}</p> 
                         </div>

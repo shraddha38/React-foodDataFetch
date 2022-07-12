@@ -13,7 +13,6 @@ export default function Consume() {
     axios
       .get("https://www.themealdb.com/api/json/v1/1/categories.php")
       .then((res) => {
-        console.log(res.data);
         setmeal(res.data.categories)
       })
       .catch((err) => {
@@ -23,22 +22,15 @@ export default function Consume() {
     $(function (){
         $('#mytable').dataTable()
     })
-
   }, []);
-
-console.log("meal=",meal)
-
-
 
   return (
     <div className="row">
     {meal.map((obj)=>{
         return (
-          
             <div className="col-sm-3">
             <div className="card mt-4">
                 <img className="card-img-top" src={obj.strCategoryThumb} />
-
                 <div className="card-body">
                 <h5 class="card-title">Type{obj.strCategory}</h5>
                 
